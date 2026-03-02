@@ -5,8 +5,9 @@ using namespace std;
 int main() {
   double num1, num2;
   char op;
+  char choice;
 
-  cout << "Enter Your First number : ";
+  do{cout << "Enter Your First number : ";
   cin >> num1;
   cout << "Enter operator (+,-,*,/): ";
   cin >> op;
@@ -15,24 +16,30 @@ int main() {
 
   switch (op) {
   case '+':
-    cout << num1 + num2;
+    cout << num1 + num2 << endl;
     break;
   case '-':
-    cout << num1 - num2;
+    cout << num1 - num2 << endl;
     break;
   case '*':
-    cout << num1 * num2;
+    cout << num1 * num2 << endl;
     break;
   case '/':
     if (num2 == 0) {
       cout << "Error! Cannot divide by 0";
     } else {
-      cout << num1 / num2;
+      cout << num1 / num2 << endl;
     }
     break;
   default:
     cout << "Invalid operator";
   }
+    
+    cout << "\nCalculate Again(y/n): ";
+    cin >> choice;
+  }while(choice =='y');
+  
+  cout << "Bye!";
 
   return 0;
 }
