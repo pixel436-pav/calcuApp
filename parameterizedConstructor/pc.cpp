@@ -18,6 +18,16 @@ public:
         name = n;
         marks = m;
     }
+    // Copy Constructor - new
+    Student(Student &s) {        // takes another Student as input
+           name = s.name;
+           marks = s.marks;
+           cout << "Copy constructor called!" << endl;
+       }
+       //Destructure - new
+       ~Student() {                 // same name as class with ~ in front
+              cout << name << " object destroyed!" << endl;
+          }
 
     void display() {
         cout << "Name: " << name << " Marks: " << marks << endl;
@@ -26,8 +36,9 @@ public:
 
 int main() {
     Student s1;                      // calls default constructor
-    Student s2("John", 95);          // calls parameterized constructor
-    Student s3 ("Pavneet",100);
+    Student s2(s1);          
+    Student s3 ("Pavneet",100);// calls parameterized constructor
+
 
     s1.display();
     s2.display();
