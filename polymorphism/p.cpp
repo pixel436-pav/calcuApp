@@ -9,6 +9,6 @@ using namespace std;
 
 int main (){
     
-    cout << "Polymorphism" << endl;
+    cout << "Polymorphism" << endl; 
     
     return 0;}
